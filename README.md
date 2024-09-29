@@ -1,2 +1,5 @@
-# JavaScript-
-Some Q/A can make mistakes. Check important info.
+# JavaScript, Node.js, MongoDV
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Mistakes can happen in some questions and answers. Please verify important information. Additionally, certain topics go deeply...!
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
