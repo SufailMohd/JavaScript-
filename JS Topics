@@ -1,0 +1,212 @@
+
+
+1 ➔ What Is JavaScript?
+Is a high-level programming language used to create interactive and dynamic websites. Is a single thread language. handle tasks sequentially. is a core technology alongside HTML and CSS.
+
+2 ➔ Data Types
+•Primitive; Numbers, Boolean, String, Null, Symbols,Undefined.
+        [Once enter the value can't be changed]
+    
+•Non-Primitive; Object, Function, Array
+        [The value can be change]
+
+3 ➔ Difference between Var, Let, Const.
+•  Var; Function scoped can be updated and re-declare. Its Hoisted
+    
+•  Let; Its Block-scoped can update. Can't re-declare in the same scope
+      
+•  Const; Block-Scoped can't be re-declared or updated. Must be initialised to declare 
+
+4 ➔ What is Closure?
+• Closure is a function that retains lexical scope. Even if the function executes the child can access variables from main.
+
+5 ➔ Lexical Scope.
+•A Variable defined outside the function can be accessed inside the function defined after variable declarations.
+
+6 ➔ What is Identifier?
+•Identifiers are used to name variables and functions. Identifiers must be with letter 
+An underscore (_) or dollar sign ($)
+
+7 ➔ Function
+•It is a block of code. It executes when it's called. Relation between input and output
+    
+-in-build function.
+JS provided some in-build function that can use directly without need to define
+ Eg:-Map, filter, reduce
+
+-Arrow Function.
+Introduced in ES6. Arrow Function provides more concise syntax compared to traditional functions. Shorting function callback and event handlers. Avoid polluting global scope.
+
+-Anonymous Function
+Is a function that is defined as without a name. Used for callback or passed as an argument to another function.  run without name
+
+8 ➔ Object.
+Object is a data structure that stores and manages collection of related data and functions. Collection of key value pairs.
+
+Object.Methods;
+.Object.keys = return property names
+.Object.values = return property values
+.Object.entries = return key-value pairs
+.Object.assign = like spread to copy to obj
+
+9 ➔ Execution context.
+We’re the JS code execute
+
+10 ➔ Null VS Undefined
+Null = absence of object value
+Undefined = The value declared but not assigned
+
+11 ➔ Prototype
+Prototype associated with objects which inherit methods and properties from objects. It’s created automatically when the object is created.
+
+12 ➔ Event Loop.
+Is a mechanism that allows asynchronous operations. Check the call stack and the message queue to execute tasks and handle events.
+
+13 ➔ Call stack
+When a function is called , a new stack is created and pushed into the call stack. Is essential for managing execution and how to handle  function calls.
+
+14 ➔ Callback
+Callback function is a function passed as an argument to another function which is executed inside the function. Used to handle asynchronous operations.
+
+15 ➔ Promise
+Promise is an object representing the eventual completion or failure of an asynchronous operation. Clear and more flexible way to handle asynchronous operations.
+
+Three States :- 
+Pending = Maybe it’s Succeed or Rejected
+Fulfilled = The operation is done.
+Rejected = The operation is not completed.
+
+Methods :-
+~ ~ ~
+
+16 ➔ Template literals
+Give more ability to string compared to traditional string. Use backtick (``) instated of using single or double quotes
+
+Features.
+Insert variable and expression and use a multi line string.
+
+17 ➔ Call, Apply, Bind
+Mainly for function borrowing.
+
+.Call = Invoke function with this value and arguments provided individually
+.Apply = Similar to “call” but arguments provided in an array
+.Bind = Return new array bind must be initialised
+
+18 ➔ Async and Await
+Used to handle asynchronous operations and a more readable way compared to callback and promises.
+
+Async = make function.
+Await = pauses execution until promises resolve.
+
+19 ➔ New
+The new operator is user defined object type with constructor function.
+
+20 ➔ SetTimeout VS SetInterval
+setTimeout  = Execute after the time delay
+setInterval = Repeatedly execute with fixed time delay
+
+21 ➔ Currying
+Return Multiple arguments into single arguments
+
+22 ➔ Object.seal VS Object.freeze
+Object.seal = Prevent adding and remove from an object but can modify
+Object.freeze = Preventing add, remove, modify of properties.
+
+23 ➔ Reflect 
+Manipulating operations on objects. What possible with proxy
+
+24 ➔ Proxy
+Allow to create a wrapper around another object. Custom behaviour for fundamental operations of an object such as access function call etc.
+
+Target = Wrap original array
+Handler = define traps
+
+25 ➔ Map, Filter, Reduce
+Map = Map create new array populated with result return new array.
+
+Filter  = Get specific values from an array. Return new array only those elements will return from the callback function.
+
+Reduce = Return total value of an array into single value.
+
+26 ➔ Event Delegation VS Event Propagation
+Event propagation = Which event passes through DOM in a web page. Two main phases Capturing and Bubbling.
+
+Event Capture = The event start from top of the dom and travel down, commonly used to compare bubbling.
+
+Event Bubbling = parent allow to handle event.
+
+Target = The event reach were initially.
+
+Event Delegation = Attach single event instead of multiple listeners to individual child element.
+
+27 ➔ Type Casting
+Convert one value data type to another
+Implicit = Convert data to value.
+Explicit = Convert value using function or method.
+
+28 ➔ Escape Sequences
+\n = new line
+\tab = tab
+\uxxxx = unicode
+
+Eg :- let str = “HELLO\nWORLD”/”\ux696”
+           log(str) 
+          Output :- Hello 
+                         World
+
+29 ➔ First class function (first-class citizens)
+Function can assign to variable, function can store variable, function can be reusable.
+Totally a perfect function.
+
+30 ➔ First order function
+Function does not accept function as argument. Does not return a function. No return value.
+
+31 ➔ Higher order function
+A function can take another function name as an argument.Function takes one or more functions as arguments or return functions as output. Return value.
+
+32 ➔ Window object
+Object represent browser window and provide methods and properties interact with the browser.
+
+33 ➔ Default parameters
+Default parameters allow functions to have default values if no argument is provided for a parameter.
+
+34 ➔ Throttling and Debouncing
+Throttling : Limit the number of times a function execute over a period of time.
+Debouncing : Function execute after certain of inactivity.
+
+35 ➔ Symbol
+Is a primitive data type introduced in ES6 that represents unique and immutable values.
+
+36 ➔ WeakMap & WeakSet
+WeakMap = Is a collection of key value pairs that are objects and values can be any type. Do not prevent garbage collection. Keys were weakly referenced
+
+WeakSet = Is a collection of objects where elements are weakly referenced.
+
+37 ➔ Truthy and Falsy value
+Truthy = Values that evaluate to true (non-zero num, non-empty string).
+Falsy = Values that evaluate to false (0,null,undefined,NaN).
+
+38 ➔ Regular VS Arrow function
+Regular Functions:- The value of this is determined by how the function is called. It can change based on the context,
+Can be used as object methods, with this referring to the object, Can be used as constructors with the new keyword.
+
+Arrow Functions:- They do not have their own this context. Instead, they inherit this from the surrounding lexical scope,
+Cannot be used as constructors and will throw an error if you try to use new, Do not have their own arguments object. If needed, you must use rest parameters.
+
+39 ➔ Nullish
+The nullish operator (??) is useful for setting defaults only when a value is absent (i.e., null or undefined),
+making your code cleaner and more precise when handling optional data.providing default values when dealing with optional data.
+
+40 ➔ Micro vs Macro Task queue
+Microtasks
+Microtasks are a type of asynchronous operation that allows you to execute code after the currently executing script and before the next event loop tick.
+Microtasks are primarily used for tasks like promise resolution and certain types of callbacks.
+
+Macrotask
+macrotask queue (which includes things like setTimeout, setInterval, and I/O events)Macrotasks handle larger operations,
+running one at a time after all synchronous code is finished. They are slower than microtasks, which run right after each macrotask.
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Mistakes can happen in some questions and answers. Please verify important information. Additionally, certain topics go deeply...!
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
