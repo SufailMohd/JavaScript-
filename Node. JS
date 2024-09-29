@@ -1,0 +1,295 @@
+1.What is node.Js? 
+It is a server side language. Run time environment is built in on chrome v8 JavaScript engine. Which provide fast execution of code light weight and efficient for heavy tasks.
+It's non-blocking. 
+
+2.What is express
+Ejs is the framework of node js. Dev in server-side, a large community and ecosystem, express is built on node js its high performance and scalability.
+Express is popular web built application.its provide powerful features.
+
+3.What is the event loop in Node.Js?
+Is a core feature of node.js that allows non-blocking operations.it continuously checks the call stack and the call back queue.
+When the call stack is empty its processes events and executes the callbacks in the callback queue.
+It allows you to handle many connections.this mechanism allows multiple operations without blocking the main thread.
+
+4.Why Node.Js
+Is very fast to execute codes.can generate dynamic pages. Collect form data. Can add, remove and modify databases.
+
+5.What is REPL
+Can test sample javascript code that will execute quickly.cmd line tool.
+
+6.Module System
+Contain a unit of code that can be import and use in other file
+
+7.What is Core-Modules 
+Is part of node js. It comes when installing node js. Essential functionalities such as http.fs.path.event.
+
+var module = require (‘module_name’)
+
+8.Local-Modules
+Create own module
+var module = require (‘module_name’)
+
+9.NPM / Third Party Modules
+When we install node js we get a node package module that allows you to install and use third-party npm libraries in your code.
+
+10.Global Object
+Is an object that is available in all modules. That can use without import any particular modules.
+
+11.OS Module (Operating System)
+It provides many functions to retrieve information from the underlying operating system and computer program runs and interact with it.
+
+12.File system (FS) Modules
+Interact computer with system file.
+
+fs.rename(./og file name, ./rename file. (err)={ condition.
+fs.unlink(./filename, (err)=>{ condition.
+
+13.What is require function
+Is used to include and import modules or files to node applications. Can use code from other files or external libraries.
+
+Function used to load and include modules and files into node.js app
+Eg = const fs =  require (‘fs’)
+
+14.Path Module
+Path modules allow users to interact with file paths easily. Also useful to manipulate path properties and methods in the file system.
+
+15.HTTP Modules 
+HTTP allows Node.js to transfer data over the HyperText Transfer Protocol(HTTP).
+Can create HTTP server can handle client req, res 
+
+HTTP vs HTTPS
+Both are two protocols
+http(HyperText Transfer Protocol)
+Data store in plan text
+Default port 80
+unsecure
+
+HTTPS 
+Data Store in encrypted 
+Default port 443
+Secure
+
+16.HTTP Methods
+GET - Retrieve resource from a server
+POST - Submit/Create data to the server
+PUT - Update an Existing data
+DELETE - Delete a resource
+HEAD - retrieve header resource without body. Used to check resource exists or to get metadata
+IDEMPOTENT - HTTP Methods and api produce multiple times the same result  as perform once no matter how many times its executed.
+
+17.Static Files
+Express.static~~
+app.use(express.static(‘public’))
+
+18.Route Parameters
+Router(to maintain HTTP req, helps to define and group route handle different HTTP)
+app.get (‘/product/;more params needed, (req, res)=>{
+
+19.Express Route
+Can organise code easily can maintain easily
+
+20.Streams
+Is a sequence of data that moves from one point to another point over a time. By working with chunks stream provide a powerful way to handle data.
+Eg = a stream of data over the internet moved from one computer to another
+Handling data in chunks.
+
+Types
+Readable, writable, duplex, transform
+.chunks(a piece of data in stream. Each chunk is an instance of Buffer or strings depending on encoding.
+
+.encoding ( converter data from another)
+
+21.MiddleWare
+Is a function defined and registered by using app.use() Middleware in node.js express.js provides a flexible way to handle various aspects of request process and handling.
+allows to manage various processing tasks.
+next() is used to pass next middleware if is not passed it will stuck function will not executed
+
+TYPES
+-Application-level middleware : Apply logic across the entire application or specific route
+-Router-level middleware : Modularize middleware for specific part of the application
+-Error-handle middleware :  Manage and response the error
+-Built-in middleware : Utilize built-in Functions for common tasks like parsing and serving static files
+-Third-party Middleware : Enhance functionality using common or library-provided middleware
+
+22.Thread
+Lightweight programming in execution . Handle a piece of information at a time.
+
+23.Event-Driven
+Node js uses event-architecture instead of handling multiple threads for operation. Node operate single thread using an event loop.
+
+24.Eventloop
+For handling I/O operations (asynchronous) Network req, File access without block main thread. Handle efficiently I/O. Node single thread also uses event loop.
+
+25.Non Blocking I/O
+Node js concurrency due to Non-Blocking I/O Main thread will not wait for asynchronous operations to finish;
+it will move to the next line of code execution. If its asynchronous opp it will handle the event loop. Can handle many concurrent req because it's highly scalable. Highly Responsive.
+
+26.Event Using & Callback 
+Different types of queue for different types of events. If a asynchronous function start a new call back will register for asynchronous tasks
+OS will notify event loop that the task is finished event loop. call back function put into main-thread call stack.
+
+27.Cookies
+Is a small file. Browsers store the interaction of the user. Also store login details, page you visit, no of pages.
+
+DIS_ADV
+Users may not be aware of how much data is being collected.
+Cookies can expire, which means users may be logged out or lose preferences if they return after a specified time.
+Cookies are stored in the browser,  if a user clears their cookies or switches browsers, their data can be lost.
+
+28.Session
+A series of actions in web activity. Normal browersing any interaction. A user enters and exits also included in sessions. Session is a server side
+Sessions are cookie dependent. Session can store to much data but cookies can’t.
+
+29.process.nextTick() vs setImmediate
+process.nextTick() schedule a callback to be execute after the current operation complete but before any I/O event or times
+Run before the I/O events and timers in the next phase
+
+setImmediate() schedules a callback to be executed in the next iteration of the event loop after I/O events are processed.
+
+30.Clustering
+Handle more concurrent req. Is for create and manage of worker processes.
+Allows to create multiple instances of node.js apps. and can distribute workload. Improve performance.
+
+31.Package.lock.json
+File automatically generated depend on installed rec version by locking the version of the package.
+
+32.Handle concurrency
+Through single-thread event loop and non-blocking I/O. it allow multiple operation without create new thread.
+
+33.Buffer
+Buffer class in node js application used to handle binary data. Is useful dealing with stream and network communication.inbuilt data handle binary data.
+
+34.Worker Thread
+Main thread runs the event loop and execute js code
+Each worker process has its own eventloop and memory space. Run javascript in parallel to avoid blocking the main thread.
+
+35.Module.exports vs exports
+Module.exports = return as the result require(). It can be assigned any value (obj, Function)  and used to export modules.
+Exports = is shorthand of export.modules. However, if you assign a new value to export it will no longer refer to module.exports.
+Reference of module.exports can’t pass obj.
+
+36.Libuv
+It supports a library on asynchronous I/O. It used to handle non-blocking I/O operations. It handle files system,asynchronous tasks.
+
+37.Advantages & Disadvantages of Node.js
+ADV
+Node allows dev to use js on both sides,reducing to switch diff programming lang.
+High performance is built in google v8 engine fast code execution . handle multiple req. 
+Rich ecosystem, vast range of libraries and modules.
+
+DIS-ADV
+Operated in a single thread event loop.
+heavy tasks can block the event loop.
+uses of callbacks for async lead to callback hell. Frequent library changes.
+
+38.__dirname vs __filename
+Dirname = provide the directory of the current module, which is useful for resolving paths relative to the modules location.
+
+Filename = give current path of module. Which is useful for logging or when you need an exact location.
+
+39.Pipe()
+A node js method is a powerful feature used to facilitate the efficient transfer of data btw stream . The method simplifies data handling by allowing you to connect a readable stream.
+
+40.Status Code
+Informational
+100 Continue = req has been received and client should continue the req
+101 Switch protocol  = req to change protocol from HTTP to WebSocket
+
+Success
+200 OK = Req has been succeeded
+201 Created  = req has be success new resource created
+202 Accepted = req accepted but not completed
+204 No content = “ “ but no content
+
+Reduction
+301 Moved Permanently = resource moved to new URL
+302 Found = Temporary moved to a different URL
+304 Not Modified = Resource not modified
+
+Client Errors
+400 Bad Req = Server can’t process due to client error
+401 Unauthorised = Authentication Failed
+403 Forbidden = server understand req but refuse authorise
+404 Not Found = could not found on the server
+405 Method Not Allowed = HTTP Method not allowed
+408 Req Timeout = server timeout 
+429 Too many req = Client send many req
+
+Server Error
+500 Internal Server Error
+501 Not Implemented = not support functionality
+502 Bad Gateway = invalid response
+503 Server Unavailable = currently unavailable 
+504 Gateway Timeout = Server not get response 
+
+41.Get vs Post 
+
+42.Crypto
+In build function. Cpu intensive. Helps to secure data and ensure integrity.
+
+43.Cors(Cross-origin Resource Sharing)
+Is a security feature how webpage makes req to domain.
+
+44.Worker Thread
+Execute Js in parallel.run separate child process from blocking main application.
+allow multiple applications in single node js instance. No separate v8 engine. event loop, memory are needed.
+
+45.Character encoding
+Character represented by number.
+
+46.Thread pool
+Pool creates a thread in advance to keep them alive useful for multi threading. Is a part of libuv library, handle heavy tasks.
+
+47.Concurrency
+Do multiple process at same time.
+
+48.Event Emitter
+Is a class in node js. That allows it to emit and listen to events as part of events.that respond to various actions and events in an organized way.
+
+49.Body-params	
+It refers to sending data to the body of an HTTP req. When making PUT, POST reqs.
+
+50.API
+Is a set of rules and protocols that allows different software applications to communicate with each other. API define methods and data format.
+
+51.SSL(secure Socket Layer)
+For security technology. Ensure that all data passed between server and client as private.
+Establish a secure connection.
+
+52.TLS (TransPort Layer Security)
+It involved from SSL. is used to encrypt data transmitted between client and server.
+
+53.Fork vs Spawn
+Create a new node.js process and js module. Is a special case of “spawn” that designed new node js processes used to communicate between parent and child processes using IPC(in-build function support between them).
+
+54.Preflight
+Brower first sends an option request to the server. Methods like PUT, DELETE.
+
+55.ENV Variable
+Is a powerful and essential tool for managing configuration and sensitive data. Security and flexibility. easily modified without changing code.
+
+56.Flash
+Used for store and display temporary message in session based storage
+Const flash = require(‘connect-flash”)
+
+57.Query
+Extract parameters from URL. Convert string into json.
+
+58.Json
+Is a lightweight data.  Format is easy for human read and write and also for machines to generate. Commonly used is client and server side.
+
+59.Req.params vs Query.params
+
+60.Dynamic Routing
+Dynamic routing in Node.js refers to the ability to handle routes that can change based on user input or application state.
+It allows developers to create more interactive and user-friendly applications.
+
+61.Local Storage
+localStorage is a powerful tool for storing data in web applications, providing a straightforward API for managing user data across sessions.
+
+62.Router Chaining
+Router chaining in Express refers to the ability to chain multiple route handlers or middleware functions together for the same route or URL path.
+This allows you to apply several functions in a sequence, simplifying your code and improving organization.
+
+63.Dynamic Routing
+A dynamic route is a web address (URL) that can change based on input. Instead of having a fixed URL.Makes URLs more meaningful and easier to understand for users.
