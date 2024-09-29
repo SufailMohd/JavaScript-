@@ -1,4 +1,4 @@
-# JavaScript, Node.js, MongoDV
+# JavaScript, Node.js, MongoDB
  
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ❗Check out these materials for JavaScript, Node.js, and MongoDB. 
